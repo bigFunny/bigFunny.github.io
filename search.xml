@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>git</title>
+      <link href="/post/518e617c.html"/>
+      <url>/post/518e617c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="常用liux命令"><a href="#常用liux命令" class="headerlink" title="常用liux命令"></a>常用liux命令</h2><p>cd：改变目录</p><p>cd..：回退到上一个目录，直接cd进入默认目录</p><p>pwd：显示当前目录路径</p><p>ls(ll)：列出当前目录中所有文件</p><p>touch：新建一个文件，如touch index.js</p><p>rm：删除一个文件用法与touch差不多</p><p>mkdir：新建一个目录</p><p>rm -f：删除一个文件夹</p><p>mv：移动文件，例：mv index.html src，将index文件移到src</p><p>reset：重新初始化</p><p>clear：清屏</p><p>history：查看历史</p><p>help：帮助</p><p>exit：退出</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>查看配置：git config -l</p><p>查看不同级别的配置文件：</p><ul><li><p>查看系统配置</p><p>git config –system –list</p></li><li><p>查看当前用户</p><p>git config –global –list</p></li></ul><p>用户名字与邮箱配置：</p><ul><li>git config –global user.name “sda”</li><li>git config –global user.email “<a href="mailto:&#x73;&#x64;&#97;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;">&#x73;&#x64;&#97;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;</a>“</li></ul><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><img src="/post/518e617c/1662041323233.png" class=""><h2 id="Git使用"><a href="#Git使用" class="headerlink" title="Git使用"></a>Git使用</h2><h3 id="项目创建及克隆"><a href="#项目创建及克隆" class="headerlink" title="项目创建及克隆"></a>项目创建及克隆</h3><p>初始化项目（将项目变成git管理的项目）：git init</p><p>克隆远程仓库：git clone [url]</p><p>ps:url 的复制地点</p><h3 id="git基"><a href="#git基" class="headerlink" title="git基"></a>git基</h3><p>查看文件状态：git status [filename] </p><p>查看所有文件状态：git status</p><p>生成公钥：ssh-keygen -t rsa</p><p>1.创建一个文件，用git init将该文件git化</p><p>2.选择克隆或者新创</p><p>3.git add.                                           将所有文件存到暂存区</p><p>4.git commit -m  “消息内容”        提交暂存区内容到本地仓库 </p><h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><img src="/post/518e617c/1662045623748.png" class=""><h3 id="远程仓库的使用"><a href="#远程仓库的使用" class="headerlink" title="远程仓库的使用"></a>远程仓库的使用</h3><p>1.注册</p><p>2.设置公钥</p><p>​生成公钥：ssh-keygen -t rsa</p><p>​ssh-keygen -t rsa -C “邮箱地址”</p><p>​    测试公钥是否绑定成功：ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a></p><img src="/post/518e617c/%E5%85%AC%E9%92%A5.png" class=""><img src="/post/518e617c/%E5%85%AC%E9%92%A52.png" class=""><img src="/post/518e617c/%E5%85%AC%E9%92%A53.png" class=""><img src="/post/518e617c/%E5%85%AC%E9%92%A54.png" class=""><p>3.将公钥添加到码云或github中</p><p>4.创建仓库（已经注册了为以下步骤）</p><img src="/post/518e617c/%E4%BB%93%E5%BA%93.png" class=""><p>5.克隆连接本地</p><p>​创建一个文件</p><p>​然后打开git输入：</p><img src="/post/518e617c/git.png" class=""><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#初始化项目（将项目变成git管理的项目）：</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment">#克隆远程仓库（克隆远程仓库）：</span></span><br><span class="line">git <span class="built_in">clone</span> [url]</span><br></pre></td></tr></table></figure><p>6.复制要添加的文件到克隆的文件</p><img src="/post/518e617c/Snipaste_2022-09-05_23-03-05.png" class=""><p>7.**git add .**将文件提供到暂存区</p><img src="/post/518e617c/idea%E4%B8%ADgit%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8F%B0.png" class=""><p>8.git commit 提交到本地仓库</p><img src="/post/518e617c/Snipaste_2022-09-05_23-05-21.png" class=""><p>便于commit</p><p>9.git push 提交到远程仓库</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出所有本地分支</span></span><br><span class="line">git branch</span><br><span class="line"><span class="comment"># 列出所有远程分支</span></span><br><span class="line">git branch -r</span><br><span class="line"><span class="comment"># 新建一个分支但仍然停留在当前分支</span></span><br><span class="line">git branch dev</span><br><span class="line"><span class="comment"># 新建一个分支，并切换到该分支</span></span><br><span class="line">git checkout -b dev</span><br><span class="line"><span class="comment"># 合并指定分支到当前分支</span></span><br><span class="line">git merge dev</span><br><span class="line"><span class="comment"># 删除分支</span></span><br><span class="line">git brand -d dev</span><br><span class="line"><span class="comment"># 删除远程分支</span></span><br><span class="line">git push origin --delete dev</span><br><span class="line">git branch -dr dev</span><br><span class="line"><span class="comment"># 推送分支到远程仓库</span></span><br><span class="line">git push origin dev</span><br><span class="line"><span class="comment"># 查看提交记录</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line"><span class="comment"># 查看本地仓库</span></span><br><span class="line">git ls-files</span><br><span class="line"><span class="comment"># 查看本地仓库[dir下]</span></span><br><span class="line">git ls-files <span class="built_in">dir</span>/</span><br><span class="line"><span class="comment"># 删除暂缓区内容</span></span><br><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br><span class="line"><span class="comment"># 删除暂缓区文件夹下所有文件</span></span><br><span class="line">git <span class="built_in">rm</span> -r --cached <span class="built_in">dir</span>/</span><br><span class="line"><span class="comment"># 删除本地分支</span></span><br><span class="line">git branch -d localBranchName</span><br><span class="line"><span class="comment"># 删除远程分支</span></span><br><span class="line">git push origin --delete remoteBranchName</span><br></pre></td></tr></table></figure><h2 id="一般创建远程项目步骤"><a href="#一般创建远程项目步骤" class="headerlink" title="一般创建远程项目步骤"></a>一般创建远程项目步骤</h2><div class="tabs" id="步骤"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#步骤-1">步骤 1</button></li><li class="tab"><button type="button" data-href="#步骤-2">步骤 2</button></li><li class="tab"><button type="button" data-href="#步骤-3">步骤 3</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="步骤-1"><blockquote class="pullquote [class]"><p>在githud或者gitee创建仓库</p></blockquote><p>xxxx为你githud或者gitee的名，如<a href="https://github.com/bigFunny">https://github.com/bigFunny</a></p><p>你的github主页:<a href="https://github.com/xxxxx">https://github.com/xxxxx</a></p><p>你的gitee主页:<a href="https://gitee.com/xxxxx">https://gitee.com/xxxxx</a></p><blockquote class="pullquote [class]"><p>点击repositories</p></blockquote><blockquote class="pullquote [class]"><p>点击new</p></blockquote><img src="/post/518e617c/%E4%BB%93%E5%BA%932.png" class=""><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="步骤-2"><blockquote class="pullquote [class]"><p>复制远程仓库路径</p></blockquote><img src="/post/518e617c/%E5%A4%8D%E5%88%B6%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E8%B7%AF%E5%BE%84.png" class=""><blockquote class="pullquote [class]"><p>克隆远程仓库</p></blockquote><p>在你喜欢的文件下git bash</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 远程仓库路径</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="步骤-3"><blockquote class="pullquote [class]"><p>将你的项目复制到带有.git的文件夹下</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;骚话&quot;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure><blockquote class="pullquote [class]"><p>如果是push到分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure></blockquote><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java-learning</title>
+      <link href="/post/7904333c.html"/>
+      <url>/post/7904333c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="java学习路线"><a href="#java学习路线" class="headerlink" title="java学习路线"></a>java学习路线</h1><img src="/post/7904333c/java.png" class=""><mark class="hl-label red">xmind</mark> 文件下载 <blockquote class="pullquote [class]"><p><a href="https://github.com/bigFunny/resource/blob/main/java%E5%90%8E%E7%AB%AF.xmind">java学习路线</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>nvm</title>
       <link href="/post/f76efcad.html"/>
       <url>/post/f76efcad.html</url>
